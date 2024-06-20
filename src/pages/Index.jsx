@@ -1,5 +1,6 @@
 import { Container, VStack, Heading, Text, Button, Box, Image } from "@chakra-ui/react";
 import { FaCode, FaLaptopCode, FaChalkboardTeacher } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const Index = () => {
   return (
@@ -15,8 +16,8 @@ const Index = () => {
           <Image src="/images/learning-platform.png" alt="Learning Platform" />
         </Box>
         <VStack spacing={4}>
-          <Button leftIcon={<FaCode />} colorScheme="teal" size="lg">
-            Start Learning
+          <Button as={Link} to="/code-editor" leftIcon={<FaCode />} colorScheme="teal" size="lg">
+            Start Coding
           </Button>
           <Button leftIcon={<FaLaptopCode />} colorScheme="blue" size="lg">
             Browse Courses
